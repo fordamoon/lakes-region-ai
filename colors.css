@@ -1,0 +1,66 @@
+/* Lakes Region AI: color tokens.
+   Every color lives here. Summer mode swaps values under the same names.
+   Rule: pink, maple and orange are for photo overlays, big display type and graphics only.
+   Interface accents (buttons, lines, borders) stay navy, copper and flame with ink text. */
+
+:root{
+  /* Night and water */
+  --night:#1B2632;
+  --navy:#2C3B4D;
+  --deep-water:#2A3140;
+  --rhino:#273F5B;
+  --haze:#6B6F8C;
+  --dusk-sky:#8A5E6E;      /* gradients only */
+  --mist:#C9B8C4;
+
+  /* Paper and stone */
+  --cream:#EEE9DF;         /* page background */
+  --oat:#C9C1B1;
+  --akaroa:#D2BCA1;
+  --overcast:#B9BEC4;
+
+  /* Fire and foliage */
+  --flame:#FFB162;         /* button fill, glow */
+  --copper:#C16C39;        /* lines, borders */
+  --maple:#B33A22;
+  --foliage:#E2701F;
+  --birch:#E5A52B;
+  --desert:#A76825;
+  --truffle:#A35139;
+  --brown-nose:#703E2B;
+  --walnut:#6F481C;
+  --forest:#2F4A2A;
+
+  /* Summer starting values (used by the season swap below) */
+  --moss:#86A464;
+  --lake-teal:#487065;
+  --sky:#7E95A6;
+
+  /* Roles */
+  --ink:#1B2632;           /* all text on cream and on flame */
+  --ink-soft:#3A4656;
+  --accent-text:#A35139;   /* small accent text on cream; truffle passes AA (about 4.6:1) */
+  --on-dark:#F6F2EA;
+
+  /* Dark glass for panels over the photo */
+  --glass:rgba(27,38,50,.78);
+  --glass-edge:rgba(255,177,98,.55);
+  --on-dark-soft:#D9D2C6;
+
+  --display:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Lora",Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+
+  /* Product surfaces */
+  --panel:#202C3A;
+  --hairline:rgba(246,242,234,.1);
+  --copper-line:rgba(193,108,57,.5);
+}
+
+/* Summer: same names, greener values. Starting values; review for clashes. */
+:root[data-season="summer"]{
+  --maple:var(--forest);
+  --foliage:var(--moss);
+  --birch:var(--lake-teal);
+  --dusk-sky:var(--sky);
+}
