@@ -406,5 +406,5 @@ dd{margin:0;font-family:var(--display);font-weight:700;font-size:18px;line-heigh
 @media (max-width:600px){.owl-tag{gap:16px;padding:14px 18px 14px 14px}.owl-tag p{font-size:18px}.owl-hex{--w:92px}}
 
 /* Owl banner: edge to edge across the page */
-.owl-tag.owl-wide{position:relative;z-index:2;width:100%;max-width:none;margin:40px 0 0;border-radius:0;border-width:2px 0;justify-content:center;gap:clamp(18px,3vw,36px);padding:20px clamp(16px,4vw,48px);background:rgba(32,44,58,.94)}
+.owl-tag.owl-wide{position:relative;z-index:2;width:100%;max-width:none;margin:0;border-radius:0;border-width:2px 0;justify-content:center;gap:clamp(18px,3vw,36px);padding:20px clamp(16px,4vw,48px);background:rgba(32,44,58,.94)}
 .owl-tag.owl-wide[hidden]{display:none}
