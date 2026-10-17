@@ -396,3 +396,11 @@ dd{margin:0;font-family:var(--display);font-weight:700;font-size:18px;line-heigh
 /* Hero closing line */
 .hero-worst{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.2vw,28px);line-height:1.2;color:var(--flame);margin:26px 0 0}
 .hero-worst span{display:block;font-weight:600;font-size:17px;color:var(--on-dark-soft);margin-top:4px}
+
+/* Owl banner, enlarged */
+.owl-tag{margin-top:32px;max-width:680px;gap:26px;padding:18px 30px 18px 18px;border-radius:20px;border-width:2px}
+.owl-tag p{font-size:21px;line-height:1.4}
+.owl-tag .tag{font-size:15px}
+.owl-tag .go{font-size:19px;margin-top:8px}
+.owl-hex{--w:136px}
+@media (max-width:600px){.owl-tag{gap:16px;padding:14px 18px 14px 14px}.owl-tag p{font-size:18px}.owl-hex{--w:92px}}
