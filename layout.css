@@ -392,3 +392,7 @@ dd{margin:0;font-family:var(--display);font-weight:700;font-size:18px;line-heigh
 .ex .ex-ours{color:var(--on-dark);border-top:1px solid var(--hairline);padding-top:12px;margin-bottom:0}
 .ex b{color:var(--flame)}
 .ex-source a{color:var(--on-dark)}
+
+/* Hero closing line */
+.hero-worst{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.2vw,28px);line-height:1.2;color:var(--flame);margin:26px 0 0}
+.hero-worst span{display:block;font-weight:600;font-size:17px;color:var(--on-dark-soft);margin-top:4px}
