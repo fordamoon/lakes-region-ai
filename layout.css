@@ -424,3 +424,17 @@ a.owl-tag.owl-wide:hover{border-color:var(--ink)}
 .owl-tag.owl-wide .owl-hex .edge{background:var(--copper)}
 .owl-tag.owl-wide .owl-hex .face{background:var(--oat)}
 a.owl-tag.owl-wide:hover{border-color:var(--flame)}
+
+/* Owl banner: taller, with pop */
+.owl-tag.owl-wide{min-height:clamp(220px,30vh,300px);padding:clamp(28px,5vw,48px) clamp(22px,5vw,64px);gap:clamp(22px,4vw,56px);border:3px solid var(--copper);border-top:10px solid var(--flame);border-radius:32px;background:linear-gradient(180deg,#FBF6EA 0%,var(--cream) 100%);box-shadow:0 0 0 6px rgba(255,177,98,.28),0 30px 60px -22px rgba(0,0,0,.7);animation:owlglow 3.2s ease-in-out infinite}
+.owl-tag.owl-wide .owl-hex{--w:clamp(120px,16vw,200px)}
+.owl-tag.owl-wide .owl-hex .edge{background:var(--maple)}
+.owl-tag.owl-wide .tag{font-size:clamp(15px,1.6vw,18px);letter-spacing:.14em;color:var(--maple)}
+.owl-tag.owl-wide p{font-size:clamp(21px,2.6vw,30px);line-height:1.35;max-width:34ch}
+.owl-tag.owl-wide .note{font-size:clamp(16px,1.8vw,20px)}
+.owl-tag.owl-wide .go{display:inline-block;margin-top:16px;padding:12px 24px;border-radius:999px;background:var(--maple);color:#fff;text-decoration:none;font-size:clamp(16px,1.8vw,20px)}
+a.owl-tag.owl-wide:hover{transform:translateY(-4px);border-color:var(--maple)}
+a.owl-tag.owl-wide:hover .go{background:var(--ink)}
+@keyframes owlglow{0%,100%{box-shadow:0 0 0 6px rgba(255,177,98,.22),0 30px 60px -22px rgba(0,0,0,.7)}50%{box-shadow:0 0 0 12px rgba(255,177,98,.38),0 30px 60px -22px rgba(0,0,0,.7)}}
+@media (prefers-reduced-motion:reduce){.owl-tag.owl-wide{animation:none}}
+@media (max-width:600px){.owl-tag.owl-wide{flex-direction:column;text-align:center;min-height:0}.owl-tag.owl-wide .owl-hex{--w:130px}}

@@ -31,16 +31,16 @@ window.LRAI = {
   },
 
   /* "What we set up": six cards. price is the big number; sub is the small line under it.
-     Full terms live on terms.html; the detailed numbers live in LRAI Pricing Reference.xlsx. */
+     Fine print (travel, payment split, texting approval) lives only on terms.html. */
   wins: [
     {
       title: "Every call gets handled.",
-      body: "Miss a call and the caller gets a friendly text right away. Or step up to an AI agent that answers in your business's name, answers their questions and takes the details. Either way, you get the lead by text.",
-      flow: ["Call comes in", "Text or AI answers", "Details to you"],
+      body: "Miss a call and the caller gets a friendly text right away, in your words. You get the lead by text and call back when you can.",
+      flow: ["Call comes in", "Text goes out", "Details to you"],
       icon: "phone",
-      name: "Text-Back or AI Phone Answering",
-      price: "From $129 a month",
-      sub: "Text-back $129, AI answering $249. Software included."
+      name: "Missed-Call Text-Back",
+      price: "Quick Win",
+      sub: "$1,000 remote or $1,500 on-site."
     },
     {
       title: "Every quote gets a follow-up.",
@@ -48,8 +48,8 @@ window.LRAI = {
       flow: ["Quote sent", "Polite follow-up", "Yes or no to you"],
       icon: "doc",
       name: "Estimate Follow-Up",
-      price: "$129 a month",
-      sub: "$250 setup. Software included."
+      price: "Quick Win",
+      sub: "$1,000 remote or $1,500 on-site."
     },
     {
       title: "Happy customers leave reviews.",
@@ -57,8 +57,8 @@ window.LRAI = {
       flow: ["Job finished", "Request sent", "A new review"],
       icon: "star",
       name: "Review Booster",
-      price: "$99 a month",
-      sub: "$250 setup. Software included."
+      price: "Quick Win",
+      sub: "$1,000 remote or $1,500 on-site."
     },
     {
       title: "Fewer no-shows.",
@@ -66,8 +66,8 @@ window.LRAI = {
       flow: ["Booking made", "Reminder the day before", "Confirmed or rescheduled"],
       icon: "calendar",
       name: "Appointment Reminders",
-      price: "$179 a month",
-      sub: "$250 setup. Software included."
+      price: "Quick Win",
+      sub: "$1,000 remote or $1,500 on-site."
     },
     {
       title: "Your website answers the same ten questions.",
@@ -75,51 +75,47 @@ window.LRAI = {
       flow: ["Visitor asks", "Answer from your info", "Tricky ones to you"],
       icon: "chat",
       name: "Website FAQ Assistant",
-      price: "$179 a month",
-      sub: "$250 setup. Software included."
+      price: "Quick Win",
+      sub: "$1,000 remote or $1,500 on-site."
     },
     {
-      title: "Something built around how you work.",
-      body: "For bigger jobs: an assistant trained on your business, or systems that connect booking, quotes, invoicing and follow-up. We map the job, build it, test it with you and train your team.",
-      flow: ["Map the job", "Build and test", "Train your team"],
+      title: "Three jobs, connected.",
+      body: "For bigger weeks: your calls, quotes and reviews working together. We map the job, build it, test it with you and train your team.",
+      flow: ["Map the jobs", "Build and test", "Train your team"],
       icon: "build",
-      name: "Custom AI Build",
-      price: "From $5,000",
-      sub: "Scoped and priced in writing.",
+      name: "AI Operations Package",
+      price: "$4,500",
+      sub: "Three connected automations in 30 days.",
       featured: true
     }
   ],
 
-  /* Prices, read top to bottom. promoFlag shows the Halloween flag while it runs. */
+  /* Prices, read top to bottom. promoFlag shows the launch flag while the promo runs. */
   ladder: [
     { step: "Start here", items: [
       { name: "20-Minute Chat", price: "Free", line: "Bring your worst week. We'll tell you straight what we'd fix first, by phone or video. If AI isn't the answer, we'll say so." }
     ]},
     { step: "Get a plan", items: [
-      { name: "AI Readiness Check", price: "$299", promoFlag: true, line: "A short written brief: the jobs eating your week, what to automate first, and what it's worth. Refunded in full if it doesn't find at least $299 of time or money. Credited toward the Operations Package." }
+      { name: "AI Readiness Check", price: "$750", promoFlag: true, line: "A written plan: the jobs eating your week, what to automate first, and what it's worth. Credited toward any project." }
     ]},
     { step: "Quick wins", items: [
-      { name: "Missed-Call Text-Back", price: "$129 a month", sub: "$250 setup · 300 texts a month", line: "Every caller you miss gets a text back." },
-      { name: "AI Phone Answering", price: "$249 a month", sub: "$500 setup · 300 call minutes a month", line: "An AI agent answers, takes the details and texts you the lead." },
-      { name: "Estimate Follow-Up", price: "$129 a month", sub: "$250 setup · 150 quotes a month", line: "Quotes that follow themselves up." },
-      { name: "Review Booster", price: "$99 a month", sub: "$250 setup · 300 requests a month", line: "More reviews, less asking." },
-      { name: "Appointment Reminders", price: "$179 a month", sub: "$250 setup · 1,000 appointments a month", line: "Fewer no-shows and empty chairs." },
-      { name: "Website FAQ Assistant", price: "$179 a month", sub: "$250 setup · 1,000 chats a month", line: "The same ten questions, answered for you." }
-    ], note: "Monthly prices include the software and a set amount of use. Three-month minimum, winter pause, pay-once option and the rest are on the Pricing terms page.", noteLink: "terms.html" },
+      { name: "Remote Quick Win", price: "$1,000", line: "One automation, set up over video. Live in 14 days." },
+      { name: "On-site Quick Win", price: "$1,500", line: "One automation, set up in person at your shop. Live in 14 days." }
+    ], note: "Pick one: Missed-Call Text-Back, Estimate Follow-Up, Review Booster, Appointment Reminders or Website FAQ Assistant. Fine print is on the Pricing terms page.", noteLink: "terms.html" },
     { step: "The full setup", items: [
-      { name: "AI Operations Package", price: "From $3,500", line: "Three connected systems in 30 days, so your phone, quotes and reviews work together. Your $299 Readiness Check is credited. Ongoing care quoted in writing." }
+      { name: "AI Operations Package", price: "$4,500", line: "Three connected automations in 30 days, so your calls, quotes and reviews work together. Founding rate of $3,500 for the first five clients." }
     ]},
-    { step: "Built for you", items: [
-      { name: "Custom AI Build", price: "From $5,000", line: "An assistant trained on your business, or systems that connect booking, quotes, invoicing and follow-up. Scoped and priced in writing before we start." }
+    { step: "Keep it running", items: [
+      { name: "Care plan", price: "$750 a month", line: "We run it, fix it, and answer when something breaks. Three-month minimum, then month to month." }
     ]}
   ],
 
-  /* The Halloween launch banner in the hero (the whole banner links to the application form),
+  /* The launch banner in the hero (the whole banner links to the application form),
      and the flag on the Readiness Check. */
   promo: {
     on: true,
-    tag: "Halloween launch",
-    line: "We're selecting three Lakes Region businesses to launch with. Each gets the $299 AI Readiness Check free.",
+    tag: "Launch partners",
+    line: "We're choosing three Lakes Region businesses to launch with. Each one gets the AI Readiness Check free, and we stay with you the whole way.",
     note: "Apply by October 31",
     flag: "Free for 3 launch partners",
     link: "apply.html",
