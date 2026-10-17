@@ -438,3 +438,8 @@ a.owl-tag.owl-wide:hover .go{background:var(--ink)}
 @keyframes owlglow{0%,100%{box-shadow:0 0 0 6px rgba(255,177,98,.22),0 30px 60px -22px rgba(0,0,0,.7)}50%{box-shadow:0 0 0 12px rgba(255,177,98,.38),0 30px 60px -22px rgba(0,0,0,.7)}}
 @media (prefers-reduced-motion:reduce){.owl-tag.owl-wide{animation:none}}
 @media (max-width:600px){.owl-tag.owl-wide{flex-direction:column;text-align:center;min-height:0}.owl-tag.owl-wide .owl-hex{--w:130px}}
+
+/* Examples: a box of four */
+.ex-grid{grid-template-columns:repeat(2,1fr);max-width:1040px;margin-left:auto;margin-right:auto}
+.ex-tag{margin:0 0 8px;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--flame)}
+@media (max-width:700px){.ex-grid{grid-template-columns:1fr}}
