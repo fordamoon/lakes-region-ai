@@ -416,3 +416,11 @@ dd{margin:0;font-family:var(--display);font-weight:700;font-size:18px;line-heigh
 .owl-tag.owl-wide .go{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
 .owl-tag.owl-wide .owl-hex .edge{background:var(--ink)}
 a.owl-tag.owl-wide:hover{border-color:var(--ink)}
+
+/* Owl strip: cream card, copper border (replaces the orange gradient) */
+.owl-tag.owl-wide{background:var(--cream);border:2px solid var(--copper);box-shadow:0 22px 44px -20px rgba(0,0,0,.6)}
+.owl-tag.owl-wide .tag{color:var(--maple)}
+.owl-tag.owl-wide .go{color:var(--ink)}
+.owl-tag.owl-wide .owl-hex .edge{background:var(--copper)}
+.owl-tag.owl-wide .owl-hex .face{background:var(--oat)}
+a.owl-tag.owl-wide:hover{border-color:var(--flame)}
