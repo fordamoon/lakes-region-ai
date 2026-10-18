@@ -93,7 +93,7 @@ window.LRAI = {
   /* Prices, read top to bottom. promoFlag shows the launch flag while the promo runs. */
   ladder: [
     { step: "Start here", items: [
-      { name: "20-Minute Chat", price: "Free", line: "Bring your worst week. We'll tell you straight what we'd fix first, by phone or video. If AI isn't the answer, we'll say so." }
+      { name: "20-Minute Chat", price: "Free", line: "We'll tell you straight what we'd fix first, by phone or video. If AI isn't the answer, we'll say so." }
     ]},
     { step: "Get a plan", items: [
       { name: "AI Readiness Check", price: "$750", promoFlag: true, line: "A written plan: the jobs eating your week, what to automate first, and what it's worth. Credited toward any project." }
