@@ -75,32 +75,38 @@
         num(300, 128, 3) + txt(300, 400, "three connected, live in 30 days");
     }},
     lake: { title: "Where we work: New Hampshire", draw: function () {
-      /* New Hampshire, traced from real border coordinates (north tip at top, seacoast on the right) */
+      /* New Hampshire, traced from real border coordinates (north tip at top, seacoast on the right).
+         The outline drafts in, a small star pops onto each place we work, then a big gold star
+         rises out of Lake Winnipesaukee for the Lakes Region. */
       var nh = "M363.6 24.7L369.1 35.2L373.1 53.4L372.1 81.4L371.1 123.4L373.1 165.4L375.1 207.4L376.1 242.4L374.1 270.4L377.1 298.4L390.2 313.8L397.3 329.2L402.3 336.2L411.4 350.2L402.3 358.6L390.2 365.6L379.2 364.2L367.1 369.8L359 374L354 383.8L341.9 389.4L281.5 388L225.1 385.2L218 368.4L216 347.4L226.1 319.4L231.1 298.4L238.2 270.4L246.2 246.6L261.3 221.4L268.4 196.2L286.5 161.2L301.6 148.6L311.7 133.2L313.7 109.4L319.7 81.4L321.8 66L328.8 49.2L341.9 33.8Z";
-      function city(cx, cy, name) {             /* survey point with a leader line out to the west */
-        return circ(cx, cy, 4.5) + ln("M" + (cx - 9) + " " + cy + "H" + (cx + 9) + "M" + cx + " " + (cy - 9) + "V" + (cy + 9)) +
-          ln("M" + (cx - 12) + " " + cy + "H196") + txt(190, cy + 5, name, "end");
-      }
-      function cityEast(cx, cy, name) {         /* seacoast point: leader runs east, toward the ocean */
-        return circ(cx, cy, 4.5) + ln("M" + (cx - 9) + " " + cy + "H" + (cx + 9) + "M" + cx + " " + (cy - 9) + "V" + (cy + 9)) +
-          ln("M" + (cx + 12) + " " + cy + "H452") + txt(458, cy + 5, name, "start");
-      }
-      function star(cx, cy, R, r) {
+      function starPath(cx, cy, R, r) {
         var pts = [];
         for (var i = 0; i < 10; i++) {
           var ang = -Math.PI / 2 + i * Math.PI / 5, rad = i % 2 ? r : R;
           pts.push((cx + rad * Math.cos(ang)).toFixed(1) + " " + (cy + rad * Math.sin(ang)).toFixed(1));
         }
-        return ln("M" + pts.join("L") + "Z", true);
+        return "M" + pts.join("L") + "Z";
       }
-      return ln(nh) +
-        /* Lake Winnipesaukee, and the Lakes Region star rising out of it */
-        ln("M326 262C329 254 338 252 344 256C350 252 356 258 352 264C356 270 348 275 342 271C336 276 327 272 330 267C324 267 323 264 326 262Z", true) +
-        '<path class="ln dash" pathLength="1" d="M346 258Q390 232 438 204"' + d() + "/>" +
-        star(468, 178, 44, 18) +
-        txt(520, 238, "Lakes Region", "start", "ac") + txt(520, 258, "home base", "start", "ac") +
-        txt(346, 296, "Lake Winnipesaukee", "middle") +
-        city(318, 318, "Concord") + city(326.4, 348.7, "Manchester") + city(325, 380.3, "Nashua") + cityEast(390, 337, "Portsmouth") +
+      var t = 1.4;                               /* seconds: when the first star pops, after the outline is drafted */
+      function pop(cx, cy) {                     /* small star that pops onto a city */
+        var el = '<path class="st" d="' + starPath(cx, cy, 9, 3.8) + '" style="--d:' + t.toFixed(2) + 's"/>';
+        t += 0.45;
+        return el;
+      }
+      function city(cx, cy, name, east) {        /* leader line + label, then the city's star pops on */
+        var lead = east ? ln("M" + (cx + 13) + " " + cy + "H452") + txt(458, cy + 5, name, "start")
+                        : ln("M" + (cx - 13) + " " + cy + "H196") + txt(190, cy + 5, name, "end");
+        return lead + pop(cx, cy);
+      }
+      var lake = ln("M326 262C329 254 338 252 344 256C350 252 356 258 352 264C356 270 348 275 342 271C336 276 327 272 330 267C324 267 323 264 326 262Z", true);
+      var cities = city(318, 318, "Concord") + city(326.4, 348.7, "Manchester") + city(325, 380.3, "Nashua") + city(390, 337, "Portsmouth", true);
+      /* The big gold star: starts small inside the lake and rises to its spot, once every city is on the map */
+      var rise = t + 0.3;
+      var big = '<path class="ln dash" pathLength="1" d="M346 258Q390 232 438 204" style="--d:' + rise.toFixed(2) + 's"/>' +
+        '<path class="rise" d="' + starPath(468, 178, 44, 18) + '" style="--d:' + (rise + 0.15).toFixed(2) + 's;--fx:-128px;--fy:84px"/>' +
+        '<text class="lb gold" x="520" y="238" style="--d:' + (rise + 0.9).toFixed(2) + 's">Lakes Region</text>' +
+        '<text class="lb gold" x="520" y="258" style="--d:' + (rise + 1).toFixed(2) + 's">home base</text>';
+      return ln(nh) + lake + txt(346, 296, "Lake Winnipesaukee", "middle") + cities + big +
         ln("M548 40V90M548 40l-8 16M548 40l8 16") + txt(548, 108, "N") +
         ln("M40 404H160M40 398V410M100 400V408M160 398V410") + txt(100, 428, "we come to you");
     }}

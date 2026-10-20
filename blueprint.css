@@ -67,3 +67,18 @@
   .bp-fig.on .ln,.bp-fig.on .lb{animation:none}
   .bp-fig{transition:none}
 }
+
+/* FIG. 7 stars: small orange stars pop onto each city, then the gold Lakes Region star rises out of the lake */
+.bp-fig .st{fill:rgba(255,177,98,.22);stroke:rgba(255,177,98,.6);stroke-width:1.4;stroke-linejoin:round;vector-effect:non-scaling-stroke;
+  transform-box:fill-box;transform-origin:center;opacity:0;transform:scale(0)}
+.bp-fig .rise{fill:rgba(229,165,43,.2);stroke:rgba(229,165,43,.85);stroke-width:1.8;stroke-linejoin:round;vector-effect:non-scaling-stroke;
+  transform-box:fill-box;transform-origin:center;opacity:0;transform:translate(var(--fx),var(--fy)) scale(.15)}
+.bp-fig .lb.gold{fill:rgba(229,165,43,.75)}
+.bp-fig.on .st{animation:bp-pop .55s cubic-bezier(.3,1.7,.5,1) forwards;animation-delay:var(--d,0s)}
+.bp-fig.on .rise{animation:bp-rise 1.3s cubic-bezier(.2,.9,.3,1.15) forwards;animation-delay:var(--d,0s)}
+@keyframes bp-pop{0%{opacity:0;transform:scale(0) rotate(-40deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes bp-rise{0%{opacity:0;transform:translate(var(--fx),var(--fy)) scale(.15)}25%{opacity:1}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .bp-fig .st,.bp-fig .rise{opacity:1;transform:none}
+  .bp-fig.on .st,.bp-fig.on .rise{animation:none}
+}
