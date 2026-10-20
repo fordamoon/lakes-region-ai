@@ -17,14 +17,14 @@
 .bp-fig svg{width:100%;height:auto;overflow:visible}
 
 /* Pencil lines */
-.bp-fig .ln{fill:none;stroke:rgba(246,242,234,.36);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;
+.bp-fig .ln{fill:none;stroke:rgba(246,242,234,.31);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;
   stroke-dasharray:1;stroke-dashoffset:1}
-.bp-fig .ln.ac{stroke:rgba(255,177,98,.62)}
+.bp-fig .ln.ac{stroke:rgba(255,177,98,.55)}
 .bp-fig .ln.dash{stroke-dasharray:.012 .02;stroke-dashoffset:0;opacity:0;transition:opacity .4s}
-.bp-fig .lb{fill:rgba(246,242,234,.44);font-family:"Bradley Hand","Segoe Print","Noteworthy","Comic Neue",cursive;font-size:17px;font-style:italic;opacity:0}
-.bp-fig .lb.ac{fill:rgba(255,177,98,.66)}
+.bp-fig .lb{fill:rgba(246,242,234,.38);font-family:"Bradley Hand","Segoe Print","Noteworthy","Comic Neue",cursive;font-size:17px;font-style:italic;opacity:0}
+.bp-fig .lb.ac{fill:rgba(255,177,98,.6)}
 .bp-fig .lb.nm{font-style:normal;font-size:13px}
-.bp-title{position:absolute;right:0;bottom:-8px;text-align:right;margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,242,234,.38);opacity:0;transition:opacity .6s ease .3s}
+.bp-title{position:absolute;right:0;bottom:-8px;text-align:right;margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,242,234,.32);opacity:0;transition:opacity .6s ease .3s}
 
 /* Drafting: each stroke draws on in turn, labels follow */
 .bp-fig.on .ln{animation:bp-draw 1.1s cubic-bezier(.4,0,.2,1) forwards;animation-delay:var(--d,0s)}
