@@ -5,10 +5,8 @@
   background-color:var(--night);
   background-image:
     linear-gradient(rgba(246,242,234,.08) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(246,242,234,.08) 1px,transparent 1px),
-    linear-gradient(rgba(246,242,234,.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(246,242,234,.03) 1px,transparent 1px);
-  background-size:48px 48px,48px 48px,12px 12px,12px 12px}
+    linear-gradient(90deg,rgba(246,242,234,.08) 1px,transparent 1px);
+  background-size:48px 48px,48px 48px}
 
 /* The drawing lives in the right-hand margin, vertically centered */
 .bp-stage{position:absolute;right:clamp(8px,2.5vw,56px);top:50%;transform:translateY(-46%);width:min(40vw,700px);aspect-ratio:600/440}
